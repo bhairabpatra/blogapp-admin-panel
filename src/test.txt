@@ -1,0 +1,11 @@
+
+
+api consume 
+
+- api end point / url
+
+- state - 
+
+data =[] - state ideal
+
+data = [ ]

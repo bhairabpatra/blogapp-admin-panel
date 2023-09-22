@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.create-post h1{
+    color: aquamarine;
+}
+.error{
+    color: red;
+    font-size: 12px;
+    padding: 5px 0px 0px;
+}
+.blog-post-description{
+    position: relative;
+    font-size: 15px;
+}
+.post-category{
+    text-transform: capitalize;
+    border: 1px solid #000000;
+    display: inline-block;
+    border-radius: 2px;
+    padding: 2px 8px;
+    position:absolute;
+    bottom: -12px;
+    right: 12px;
+    font-size: 10px;
+}
+
+.btm-area p{
+    text-transform: capitalize;
+    border: 1px solid #000000;
+    display: inline-block;
+    border-radius: 2px;
+    margin-bottom: 0px !important;
+    position:absolute;
+    bottom: 5px;
+    left: 2px;
+    padding: 2px 8px;
+    font-size: 10px;  
+    background-color: #000;
+    color:#FFF; 
+}
+.top-area p{
+    text-align: left;
+    margin-top: -5px;
+}
+
+.post-title{
+        font-size:20px;
+}
+.like-btm p{
+    text-transform: capitalize;
+    display: inline-block;
+    border-radius: 2px;
+    margin-bottom: 0px !important;
+    position:absolute;
+    bottom: -2px;
+    left: 0px;
+    padding: 2px 8px;
+    font-size: 20px;  
+    color: #000000;
+}
+ 
+.blog-post-img img{
+    width: 100%;
+    height: auto;
+    text-align: left;
+    border: 1px solid;
+}
+ .create-post-btn{
+    border-radius: 0px !important;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.blog-post{
+    border: 1px solid #f2f2f2;
+    background-color: #f2f2f2;
+    color: #000;
+    position: relative;
+    list-style-type: none;
+}
+.btm-area {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    
+  
+}
+
+/*create-post CSS start here*/
+
+.create-post{
+     border: 1px solid rgb(255, 255, 255);
+     background-color: #f2f2f2;
+     max-width: 75%;
+     margin: 0px auto;
+     padding: 40px 50px 50px;
+}
+
+ 
+.blog-post-latest img{
+   
+    width: 100%;
+    height: auto;
+   
+}
+.latest-post-title{
+    font-size:15px;
+    padding: 10px 0px 0px;
+}
+.blog-post-right-section{
+    background-color: #FFF;
+}
+
+.heading h2{
+    font-size: 25px;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #ffffff;
+    font-weight: 500;
+    width: 100%;
+    display:inline-block;
+}
+.col-md-10.blog-post-description {
+    padding-left: 0px;
+}
+.right-side-post{
+    background-color: #f2f2f2;
+}
+
+.heading h3{
+    text-transform:uppercase;
+    font-size: 25px;
+    text-align: center;
+
+}
+.view-post{
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+.view-post button{
+    font-size: 10px;
+}
+.post-details{
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+.post-img img{
+    width: 100%;
+    height: auto;
+}
+
+.post-long-description p{
+    padding: 15px 0px 0px;
+    line-height: 30px;
+}
+
