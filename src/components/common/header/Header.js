@@ -2,20 +2,26 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const [isLogin, setLogin] = useState(false);
-  let myValue = localStorage.getItem("token");
-  const verifyLogin = () => {
-     if(myValue !== null){
-      setLogin(!isLogin)
-     }else{
-      setLogin(isLogin)
-     }
+  const checkIsLoggedIn = () => {
+    if (localStorage.getItem("isLoggedIn") === "true") {
+      setIsLoggedIn(!isLoggedIn);
+    } else {
+      setIsLoggedIn(isLoggedIn);
+    }
+  };
 
-  }
-  useEffect(()=>{
-    verifyLogin()
-  },[])
+  useEffect(() => {
+    checkIsLoggedIn();
+    return () => {};
+  }, []);
+
+  const handleLogout = () => {
+    setIsLoggedIn(isLoggedIn);
+    localStorage.removeItem("isLoggedIn");
+    window.location.reload();
+  };
   // myValue !== null ? setLogin(!isLogin) : setLogin(!isLogin)
   return (
     <div>
@@ -34,13 +40,17 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="collapsibleNavbar">
             <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-                <NavLink to="/" activeclassname="active" className="nav-link">
-                  Home
+              <li className="nav-item">
+                <NavLink to="/" className="nav-link">
+                  HOME
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/user" activeclassname="active" className="nav-link">
+                <NavLink
+                  to="/user"
+                  activeclassname="active"
+                  className="nav-link"
+                >
                   USERS
                 </NavLink>
               </li>
@@ -49,16 +59,25 @@ const Header = () => {
                   POSTS
                 </NavLink>
               </li>
-              <li className="nav-item">
-               {isLogin ?  <div><NavLink className="nav-link">
-                  Hi, Welcome
-                </NavLink></div> : <NavLink to="sign-in" className="nav-link">
-                  LOGIN
-                </NavLink>} 
-              </li>
-
-              
             </ul>
+          </div>
+          <div class="navbar-nav ms-auto">
+            <li className="nav-item">
+              {isLoggedIn ? (
+                <NavLink
+                  to="/"
+                  activeclassname="active"
+                  className="nav-link"
+                  onClick={handleLogout}
+                >
+                  LOGOUT
+                </NavLink>
+              ) : (
+                <NavLink to="sign-in" className="nav-link">
+                  LOGIN
+                </NavLink>
+              )}
+            </li>
           </div>
         </div>
       </nav>

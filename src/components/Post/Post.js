@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Axios from "axios";
-import { NavLink, Link } from "react-router-dom";
-import Createpost from "./Createpost";
+import {Link } from "react-router-dom";
 import "./Createpost.css";
-import Tranding from "./Tranding";
+import Category from "./Category";
+
 function Post() {
   const apiUrl = "http://localhost:8080/api/v1/posts";
   const [post, setPost] = useState([]);
@@ -67,7 +67,7 @@ function Post() {
             
           </div>
           <div className="col-md-3 right-side-post">
-           <Tranding />
+           <Category />
          
        </div>
         </div>
